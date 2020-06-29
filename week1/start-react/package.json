@@ -44,5 +44,18 @@
   "devDependencies": {
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --ext .tsx --ext .ts src/ --fix"
+    ],
+    "./src/**": [
+      "prettier --write ."
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
