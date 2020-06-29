@@ -21,6 +21,7 @@
   "eslintConfig": {
     "extends": [
       "react-app",
+      "airbnb",
       "prettier"
     ],
     "rules": {
@@ -45,7 +46,7 @@
     "lint-staged": "^10.2.11"
   },
   "lint-staged": {
-    "*.js": ["eslint", "prettier"]
+    "*.js": ["eslint"]
   },
   "husky": {
     "hooks": {
