@@ -45,7 +45,7 @@
     "lint-staged": "^10.2.11"
   },
   "lint-staged": {
-    "*.js": ["eslint"]
+    "*.js": ["eslint", "prettier"]
   },
   "husky": {
     "hooks": {
