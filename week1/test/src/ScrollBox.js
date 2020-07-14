@@ -24,6 +24,7 @@ class ScrollBox extends Component {
     };
 
     return (
+      // eslint-disable-next-line no-return-assign
       <div style={style} ref={(ref) => (this.box = ref)}>
         <div style={innerStyle} />
       </div>

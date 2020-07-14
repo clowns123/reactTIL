@@ -24,13 +24,13 @@ const IterationSample = () => {
     setInputText('');
   };
 
-  const nameList = names.map((name) => (
-    <li key={name.id}>{name.text}</li>
-  ));
+  const nameList = names.map((name) => <li key={name.id}>{name.text}</li>);
   return (
     <>
       <input value={inputText} onChange={onChange} />
-      <button onClick={onClick}>추가</button>
+      <button type="button" onClick={onClick}>
+        추가
+      </button>
       <ul>{nameList}</ul>;
     </>
   );
