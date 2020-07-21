@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/clowns123/reactTIL/issues"
   },
-  "homepage": "https://github.com/clowns123/reactTIL#readme"
+  "homepage": "https://github.com/clowns123/reactTIL#readme",
+  "devDependencies": {
+    "eslint-config-prettier": "^6.11.0",
+    "prettier": "^2.0.5"
+  }
 }
