@@ -12,8 +12,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": { 
+    "**/*.js?(X)":["eslint --fix", "prettier --write", "git add"]
   },
   "keywords": [],
   "author": "",
@@ -24,6 +27,7 @@
   "homepage": "https://github.com/clowns123/reactTIL#readme",
   "devDependencies": {
     "eslint-config-prettier": "^6.11.0",
+    "lint-staged": "^10.2.11",
     "prettier": "^2.0.5"
   }
 }
