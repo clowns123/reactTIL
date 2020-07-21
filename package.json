@@ -10,6 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/clowns123/reactTIL.git"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
