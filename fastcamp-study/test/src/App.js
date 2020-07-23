@@ -1,21 +1,11 @@
 import React from 'react';
-import ClassComponent from './components/ClassComponent';
-import FunctionalComponent from './components/FunctionalComponent';
+import StateComponents from './components/StateComponents';
 
 function App() {
   return (
-    <div className="App">
-      <ClassComponent name="mark" age={12}>
-        children
-      </ClassComponent>
-      <ClassComponent name="mark" age={12} />
-      <ClassComponent />
-      <FunctionalComponent name="mark" age={12}>
-        children
-      </FunctionalComponent>
-      <FunctionalComponent name="mark" age={12} />
-      <FunctionalComponent />{' '}
-    </div>
+    <>
+      <StateComponents />
+    </>
   );
 }
 
