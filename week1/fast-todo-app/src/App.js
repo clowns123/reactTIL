@@ -1,6 +1,9 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
 import TodoTemplate from "./components/TodoTemplate";
+import TodoHead from "./components/TodoHead";
+import TodoList from "./components/TodoList";
+import TodoCreate from "./components/TodoCreate";
 
 const GolbalStyle = createGlobalStyle`
   body{
@@ -12,7 +15,11 @@ function App() {
   return (
     <>
       <GolbalStyle />
-      <TodoTemplate>안녕</TodoTemplate>
+      <TodoTemplate>
+        <TodoHead />
+        <TodoList />
+        <TodoCreate />
+      </TodoTemplate>
     </>
   );
 }
