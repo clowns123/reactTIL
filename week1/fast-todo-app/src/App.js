@@ -12,16 +12,16 @@ const GolbalStyle = createGlobalStyle`
 `;
 
 function App() {
-  return (
-    <>
-      <GolbalStyle />
-      <TodoTemplate>
-        <TodoHead />
-        <TodoList />
-        <TodoCreate />
-      </TodoTemplate>
-    </>
-  );
+    return (
+        <>
+            <GolbalStyle />
+            <TodoTemplate>
+                <TodoHead />
+                <TodoList />
+                <TodoCreate />
+            </TodoTemplate>
+        </>
+    );
 }
 
 export default App;
