@@ -1,22 +1,54 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Profile from "./Profile";
-import About from "./About";
-import Home from "./Home";
-import NotFound from "./NotFound";
+import { NavLink } from "react-router-dom";
 
-function App() {
-    return (
-        <BrowserRouter>
-            <Switch>
-                <Route path="/profile/:id" component={Profile} />
-                <Route path="/profile" component={Profile} />
-                <Route path="/about" component={About} />
-                <Route path="/" exact component={Home} />
-                <Route component={NotFound} />
-            </Switch>
-        </BrowserRouter>
-    );
+function Links() {
+  const activeStyle = { color: "green" };
+
+  return (
+    <ul>
+      <li>
+        <NavLink exact to="/" activeStyle={activeStyle}>
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink exact to="/profile" activeStyle={activeStyle}>
+          Profile
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/profile/1" activeStyle={activeStyle}>
+          Profile/1
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/about"
+          activeStyle={activeStyle}
+          isActive={(match, location) => {
+            if (location.pathname !== "/about") return false;
+            const searchParams = new URLSearchParams(location.search);
+            return !searchParams.has("name");
+          }}
+        >
+          About
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/about?name=mark"
+          activeStyle={activeStyle}
+          isActive={(match, location) => {
+            if (location.pathname !== "/about") return false;
+            const searchParams = new URLSearchParams(location.search);
+            return searchParams.has("name");
+          }}
+        >
+          About?name=mark
+        </NavLink>
+      </li>
+    </ul>
+  );
 }
 
-export default App;
+export default Links;
