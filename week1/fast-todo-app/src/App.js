@@ -4,6 +4,7 @@ import TodoTemplate from "./components/TodoTemplate";
 import TodoHead from "./components/TodoHead";
 import TodoList from "./components/TodoList";
 import TodoCreate from "./components/TodoCreate";
+import { TodoProvider } from "./TodoContext";
 
 const GolbalStyle = createGlobalStyle`
   body{
@@ -12,16 +13,16 @@ const GolbalStyle = createGlobalStyle`
 `;
 
 function App() {
-    return (
-        <>
-            <GolbalStyle />
-            <TodoTemplate>
-                <TodoHead />
-                <TodoList />
-                <TodoCreate />
-            </TodoTemplate>
-        </>
-    );
+  return (
+    <TodoProvider>
+      <GolbalStyle />
+      <TodoTemplate>
+        <TodoHead />
+        <TodoList />
+        <TodoCreate />
+      </TodoTemplate>
+    </TodoProvider>
+  );
 }
 
 export default App;
